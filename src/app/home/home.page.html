@@ -1,0 +1,28 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Início</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Início</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <div id="container">
+    <div class="heading">
+      <ion-title>Olá! Essa é a tela inicial do meu projeto.</ion-title>
+      <p>São atualmente {{ currentTime }}</p>
+    </div>
+    <ion-item lines="full">
+      <ion-toggle aria-label="Alternar tema" (ionChange)="changeTheme()" slot="end"></ion-toggle>
+    </ion-item>
+    <swiper-container [pagination]="true" [slidesPerView]="1" [spaceBetween]="30" [loop]="true">
+      <swiper-slide><img src="https://images.unsplash.com/photo-1589965716319-4a041b58fa8a" alt=""></swiper-slide>
+      <swiper-slide><img src="https://images.unsplash.com/photo-1622065713075-a5e28dcc802c" alt=""></swiper-slide>
+      <swiper-slide><img src="https://images.unsplash.com/photo-1554692844-6627ca340264" alt=""></swiper-slide>
+      <swiper-pagination></swiper-pagination>
+    </swiper-container>
+  </div>
+</ion-content>
